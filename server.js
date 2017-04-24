@@ -28,8 +28,8 @@ app.use('/api/v1/', todos);
 app.use('*', function(req, res)
 {
   res.sendFile(path.join(__dirname, 'public/index.html'));
-})
-//var port = process.env.PORT || 8080;
-app.listen(3000, function(){
-    console.log('Server started on port 3000...');
+});
+var port = process.env.PORT || 8080;
+app.listen(port, function(){
+    console.log('Server started on port'+port);
 });
